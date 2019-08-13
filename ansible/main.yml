@@ -1,0 +1,14 @@
+- name: Get all solc versions
+  hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vars.yml
+  vars:
+    solc_versions: "{{ lookup('file', 'resources/solc_versions_short.yml') | from_yaml }}"
+  tasks:
+    - name: Iterate through tasks
+      include_tasks: perform_for_single_solc_version.yml
+      with_items: "{{ solc_versions }}"
+      loop_control:
+        loop_var: solc_version
+        

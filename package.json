@@ -1,0 +1,18 @@
+{
+  "name": "external_call_bug_hunt",
+  "version": "0.0.1",
+  "description": "Minimal setup for hunting smart contract external call bug hunt",
+  "main": "index.js",
+  "author": "Anze1m",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "waffle .waffle.json",
+    "test": "node scripts/test.js",
+    "start": "ansible-playbook ansible/main.yml"
+  },
+  "dependencies": {
+    "ethereum-waffle": "^2.0.15",
+    "ethers": "^4.0.33"
+  }
+}

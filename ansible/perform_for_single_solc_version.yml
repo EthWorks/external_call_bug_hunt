@@ -1,0 +1,15 @@
+- name: Set solc version to {{ solc_version }}
+  shell: yarn test
+  register: output
+- name: Set pragma solidity to {{ solc_version }}
+  shell: yarn test
+  register: output
+- name: Compile with {{ solc_version }}
+  shell: yarn build
+- name: Run test with {{ solc_version }}
+  shell: yarn test
+  register: output
+- name: Show result
+  debug:
+    msg: "{{ output.stdout_lines[1] }}"
+        
