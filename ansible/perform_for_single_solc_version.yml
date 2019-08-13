@@ -1,15 +1,19 @@
 - name: Set solc version to {{ solc_version }}
-  shell: yarn test
-  register: output
+  replace:
+    path: "{{ compliler_config_file }}"
+    regexp: v.+\+commit\.[0-9a-f]{8}
+    replace: "{{ solc_version }}"
 - name: Set pragma solidity to {{ solc_version }}
-  shell: yarn test
-  register: output
+  replace:
+    path: "{{ contract_file }}"
+    regexp: \d+\.\d+\.\d+
+    replace: "{{ solc_version | regex_search('[0-9]{1,2}.[0-9]{1,2}.[0-9]{1,2}') }}"
 - name: Compile with {{ solc_version }}
   shell: yarn build
 - name: Run test with {{ solc_version }}
   shell: yarn test
   register: output
-- name: Show result
+- name: Show result for {{ solc_version }}
   debug:
     msg: "{{ output.stdout_lines[1] }}"
         

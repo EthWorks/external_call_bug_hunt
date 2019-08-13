@@ -4,7 +4,7 @@
   vars_files:
     - vars.yml
   vars:
-    solc_versions: "{{ lookup('file', 'resources/solc_versions_short.yml') | from_yaml }}"
+    solc_versions: "{{ lookup('file', '{{ solc_versions_list }}') | from_yaml }}"
   tasks:
     - name: Iterate through tasks
       include_tasks: perform_for_single_solc_version.yml

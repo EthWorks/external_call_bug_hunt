@@ -1,5 +1,5 @@
 ---
 contract_file: ../contracts/caller_receiver.sol
 compliler_config_file: ../.waffle.json
-solc_versions_list: resources/solc_versions_short.yml
+solc_versions_list: resources/solc_versions_short_from_23.yml
 parity_tags_list: resources/parity_tags.yml

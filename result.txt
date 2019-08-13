@@ -1,0 +1,35 @@
+yarn run v1.16.0
+$ ansible-playbook ansible/main.yml
+
+PLAY [Get all solc versions] ********************************************************************************************************************************************************************************************************************************************************************************************
+
+TASK [Iterate through tasks] ********************************************************************************************************************************************************************************************************************************************************************************************
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
+
+TASK [Set solc version to v0.5.10+commit.5a6ea5b1] **********************************************************************************************************************************************************************************************************************************************************************
