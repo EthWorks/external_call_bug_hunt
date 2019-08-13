@@ -9,7 +9,7 @@
   "scripts": {
     "build": "waffle .waffle.json",
     "test": "node scripts/test.js",
-    "start": "ansible-playbook ansible/main.yml"
+    "start": "ansible-playbook ansible/perform_for_single_parity_version.yml"
   },
   "dependencies": {
     "ethereum-waffle": "^2.0.15",

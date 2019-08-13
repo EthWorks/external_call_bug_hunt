@@ -22,7 +22,7 @@
     hash = tx.hash;
   } catch (error) {
     console.log('FAILURE (transaction failed)');
-    return;
+    return 1;
   }
 
 
@@ -33,9 +33,9 @@
     && parsedEvent.values.addr2 === address2
     && parsedEvent.values.addr1 === address1) {
       console.log('SUCCESS');
-      return;
+      return 0;
   } else {
     console.log('FAILURE (wrong value)');
-    return;
+    return 1;
   }
 })()

@@ -6,7 +6,7 @@
   vars:
     solc_versions: "{{ lookup('file', '{{ solc_versions_list }}') | from_yaml }}"
   tasks:
-    - name: Iterate through tasks
+    - name: Iterate through solc versions
       include_tasks: perform_for_single_solc_version.yml
       with_items: "{{ solc_versions }}"
       loop_control:
