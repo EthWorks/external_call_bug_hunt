@@ -1,14 +1,24 @@
-- name: Get all solc versions
-  hosts: localhost
-  gather_facts: false
-  vars_files:
-    - vars.yml
-  vars:
-    solc_versions: "{{ lookup('file', '{{ solc_versions_list }}') | from_yaml }}"
-  tasks:
-    - name: Iterate through solc versions
-      include_tasks: perform_for_single_solc_version.yml
-      with_items: "{{ solc_versions }}"
-      loop_control:
-        loop_var: solc_version
-        
+- name: Start parity {{ parity_tag }}
+  docker_container:
+    name: parity_{{ parity_tag }}
+    image: parity/parity:{{ parity_tag }}
+    command: --chain dev --unsafe-expose
+    ports:
+      - '8545:8545'
+    exposed_ports:
+      - '8545'
+- name: Iterate through solc versions
+  include_tasks: perform_for_single_solc_version.yml
+  with_items: "{{ solc_versions }}"
+  loop_control:
+    loop_var: solc_version
+- name: Stop parity {{ parity_tag }}
+  docker_container:
+    name: parity_{{ parity_tag }}
+    state: absent
+- name: Delete parity {{ parity_tag }}
+  docker_image:
+    state: absent
+    name: parity/parity
+    repository: parity/parity
+    tag: "{{ parity_tag }}"
