@@ -10,9 +10,10 @@
     "build": "waffle .waffle.json",
     "test": "node scripts/test.js",
     "start": "ansible-playbook ansible/main.yml",
-    "start:save": "ansible-playbook ansible/main.yml >> result.txt"
+    "start:save": "ansible-playbook ansible/main.yml >> results.txt"
   },
   "dependencies": {
+    "cli-table": "^0.3.1",
     "ethereum-waffle": "^2.0.15",
     "ethers": "^4.0.33"
   }

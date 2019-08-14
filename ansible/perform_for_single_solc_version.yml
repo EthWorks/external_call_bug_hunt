@@ -16,7 +16,7 @@
   shell: yarn test
   register: output
   when: compilation_result.rc == 0
-- name: Show result for {{ solc_version }}
+- name: Show result for parity:{{ parity_tag }} and solc:{{ solc_version }}
   debug:
     msg: "{{ output.stdout_lines[1] }}"
   when: compilation_result.rc == 0

@@ -1,5 +1,5 @@
 {
-  "solcVersion": "v0.5.6+commit.b259423e",
+  "solcVersion": "v0.4.11+commit.68ef5810",
   "legacyOutput": "true",
   "sourcesPath": "./contracts",
   "targetPath": "./scripts/abi"
