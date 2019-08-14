@@ -18,7 +18,7 @@
 
   solcVersions.forEach((solcVersion) => {
     const newRow = {};
-    newRow[solcVersion] = Object.values(resultsSegragatedBySolcVersion[solcVersion])
+    newRow[solcVersion] = Object.values(resultsSegragatedBySolcVersion[solcVersion]).map(x => x === 'SUCCESS' ? 'OK' : x)
     table.push(newRow)
   });
 
