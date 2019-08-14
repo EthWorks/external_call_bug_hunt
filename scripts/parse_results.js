@@ -2,13 +2,7 @@
   const results = require('../results.json');
   const Table = require('cli-table');
 
-  const parityVersions = Object.keys(results.reduce((acc, curr) => {
-    if(acc[curr[0]] === undefined) {
-      acc[curr[0]] = {};
-    }
-    acc[curr[0]][curr[1]] = curr[2];
-    return acc;
-  }, {}));
+  const parityVersions = [...new Set(results.map((arr) => arr[0]))];
 
   const resultsSegragatedBySolcVersion = results.reduce((acc, curr) => {
     if(acc[curr[1]] === undefined) {
@@ -26,10 +20,7 @@
     const newRow = {};
     newRow[solcVersion] = Object.values(resultsSegragatedBySolcVersion[solcVersion])
     table.push(newRow)
-  })
-
+  });
 
   console.log(table.toString());
-
-
 })();
