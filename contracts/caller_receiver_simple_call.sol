@@ -1,9 +1,9 @@
 pragma solidity ^0.4.23;
 
-contract Caller {
-    Receiver public receiver;
+contract CallerSimple {
+    ReceiverSimple public receiver;
 
-    constructor(Receiver _receiver) public {
+    constructor(ReceiverSimple _receiver) public {
         receiver = _receiver;
     }
 
@@ -12,10 +12,11 @@ contract Caller {
     }
 }
 
-contract Receiver {
-    event ActionPerformed();
+contract ReceiverSimple {
+    event ActionPerformed(address addr);
 
     function performAction() public {
-        emit ActionPerformed();
+        address addr = 0xf4f01b758D441Bd097B6F09F44440Ff7Cb89dcBB;
+        emit ActionPerformed(addr);
     }
 }

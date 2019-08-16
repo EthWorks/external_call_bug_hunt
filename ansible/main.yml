@@ -6,6 +6,7 @@
   vars:
     solc_versions: "{{ lookup('file', '{{ solc_versions_list }}') | from_yaml }}"
     parity_tags: "{{ lookup('file', '{{ parity_tags_list }}') | from_yaml }}"
+    contract_files: "{{ lookup('file', '{{ contract_files_list }}') | from_yaml }}"
   tasks:
     - name: Iterate through parity versions
       include_tasks: perform_for_single_parity_version.yml

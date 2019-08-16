@@ -10,6 +10,7 @@
     "build": "waffle .waffle.json",
     "test": "node scripts/test.js",
     "test_simple": "node scripts/test_simple.js",
+    "test_one_argument": "node scripts/test_one_argument.js",
     "start": "ansible-playbook ansible/main.yml",
     "start:save": "ansible-playbook ansible/main.yml >> results_simple.txt"
   },

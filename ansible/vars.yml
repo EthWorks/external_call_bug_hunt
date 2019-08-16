@@ -1,6 +1,8 @@
 ---
-contract_file: ../contracts/caller_receiver_simple_call.sol
+contract_directory: ../contracts
+contract_file: caller_receiver_simple_call.sol
 test_command: test_simple
 compliler_config_file: ../.waffle.json
+contract_files_list: resources/contract_files.yml
 solc_versions_list: resources/solc_versions_short_from_23.yml
 parity_tags_list: resources/parity_tags.yml

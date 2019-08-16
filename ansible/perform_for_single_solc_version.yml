@@ -5,9 +5,12 @@
     replace: "{{ solc_version }}"
 - name: Set pragma solidity to {{ solc_version }}
   replace:
-    path: "{{ contract_file }}"
+    path: "{{ contract_directory }}/{{ contract_file_name }}"
     regexp: \d+\.\d+\.\d+
     replace: "{{ solc_version | regex_search('[0-9]{1,2}.[0-9]{1,2}.[0-9]{1,2}') }}"
+  with_items: "{{ contract_files }}"
+  loop_control:
+    loop_var: contract_file_name
 - name: Compile with {{ solc_version }}
   shell: yarn build
   ignore_errors: yes
