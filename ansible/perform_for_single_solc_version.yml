@@ -12,11 +12,11 @@
   shell: yarn build
   ignore_errors: yes
   register: compilation_result
-- name: Run test with {{ solc_version }}
-  shell: yarn test
+- name: Run {{ test_command }} with {{ solc_version }}
+  shell: yarn {{ test_command }}
   register: output
   when: compilation_result.rc == 0
-- name: Show result for parity:{{ parity_tag }} and solc:{{ solc_version }}
+- name: Show {{ test_command }} result for parity:{{ parity_tag }} and solc:{{ solc_version }}
   debug:
     msg: "{{ output.stdout_lines[1] }}"
   when: compilation_result.rc == 0
