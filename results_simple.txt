@@ -18,7 +18,7 @@ included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perfor
 included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_parity_version.yml for localhost
 
 TASK [Start parity v2.6.0-beta] *************************************************************************************************************************************************************************************************************************************************************
-changed: [localhost]
+ok: [localhost]
 
 TASK [Iterate through solc versions] ********************************************************************************************************************************************************************************************************************************************************
 included: /Users/bartek/Documents/Ethworks/external_call_bug_hunt/ansible/perform_for_single_solc_version.yml for localhost
@@ -4372,5 +4372,5 @@ TASK [Delete parity v2.3.3] ****************************************************
 changed: [localhost]
 
 PLAY RECAP **********************************************************************************************************************************************************************************************************************************************************************************
-localhost                  : ok=1316 changed=882  unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+localhost                  : ok=1316 changed=881  unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 
